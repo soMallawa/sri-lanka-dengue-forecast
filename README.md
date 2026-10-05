@@ -74,6 +74,7 @@ The wrapper reuses the selected frozen model family, hyperparameters, feature sc
 The repository also keeps the original acquisition, feature, and evaluation entry points:
 
 ```bash
+python -m pip install -e '.[train,geospatial]'
 dengue-forecast dengue discover --source epid --start-year 2010 --end-year 2024 --data-root data
 dengue-forecast dengue download --data-root data
 dengue-forecast dengue parse --start-year 2010 --end-year 2024 --data-root data

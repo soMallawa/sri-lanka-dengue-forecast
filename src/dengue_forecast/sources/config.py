@@ -26,7 +26,10 @@ class SourceConfigError(ValueError):
 
 
 def default_config_path() -> Path:
-    return Path(__file__).resolve().parents[3] / "configs" / "sources.yaml"
+    checkout = Path(__file__).resolve().parents[3] / "configs" / "sources.yaml"
+    if checkout.is_file():
+        return checkout
+    return Path(__file__).resolve().parents[1] / "_configs" / "sources.yaml"
 
 
 def _config_path() -> Path:

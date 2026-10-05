@@ -1,0 +1,6 @@
+wer_index: "https://www.epid.gov.lk/weekly-epidemiological-report"
+ndcu_index: "https://www.dengue.health.gov.lk/weekly-report/"
+boundaries_geojson: "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/LKA/ADM2/geoBoundaries-LKA-ADM2.geojson"
+population_workbook: "https://www.statistics.gov.lk/Population/StaticalInformation/CPH2024/Population_Tables"
+chirps_daily_template: "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/cogs/{year}/chirps-v3.0.rnl.{date}.cog"
+era5_archive: "https://archive-api.open-meteo.com/v1/archive"

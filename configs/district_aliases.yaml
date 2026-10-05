@@ -1,0 +1,75 @@
+Ampara:
+  district_id: LK-AMP
+  aliases: [Ampara]
+Anuradhapura:
+  district_id: LK-ANU
+  aliases: [Anuradhapura]
+Badulla:
+  district_id: LK-BAD
+  aliases: [Badulla]
+Batticaloa:
+  district_id: LK-BAT
+  aliases: [Batticaloa]
+Colombo:
+  district_id: LK-COL
+  aliases: [Colombo]
+Galle:
+  district_id: LK-GAL
+  aliases: [Galle]
+Gampaha:
+  district_id: LK-GAM
+  aliases: [Gampaha]
+Hambantota:
+  district_id: LK-HAM
+  aliases: [Hambantota, Hambanthota]
+Jaffna:
+  district_id: LK-JAF
+  aliases: [Jaffna]
+Kalutara:
+  district_id: LK-KAL
+  aliases: [Kalutara]
+Kandy:
+  district_id: LK-KAN
+  aliases: [Kandy]
+Kegalle:
+  district_id: LK-KEG
+  aliases: [Kegalle, Kegalla]
+Kilinochchi:
+  district_id: LK-KIL
+  aliases: [Kilinochchi, Kilinochchi District, Kilinochi]
+Kurunegala:
+  district_id: LK-KUR
+  aliases: [Kurunegala]
+Mannar:
+  district_id: LK-MAN
+  aliases: [Mannar]
+Matale:
+  district_id: LK-MAT
+  aliases: [Matale]
+Matara:
+  district_id: LK-MAR
+  aliases: [Matara]
+Monaragala:
+  district_id: LK-MON
+  aliases: [Monaragala, Moneragala]
+Mullaitivu:
+  district_id: LK-MUL
+  aliases: [Mullaitivu, Mullativu]
+Nuwara Eliya:
+  district_id: LK-NUW
+  aliases: [Nuwara Eliya, Nuwara-Eliya, "N'Eliya", N Eliya]
+Polonnaruwa:
+  district_id: LK-POL
+  aliases: [Polonnaruwa]
+Puttalam:
+  district_id: LK-PUT
+  aliases: [Puttalam]
+Ratnapura:
+  district_id: LK-RAT
+  aliases: [Ratnapura, Rathnapura]
+Trincomalee:
+  district_id: LK-TRI
+  aliases: [Trincomalee, Trinco]
+Vavuniya:
+  district_id: LK-VAV
+  aliases: [Vavuniya]

@@ -13,6 +13,8 @@ from dengue_forecast.contracts import ContractError
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CONFIG_DIR = REPO_ROOT / "configs"
+if not CONFIG_DIR.is_dir():
+    CONFIG_DIR = Path(__file__).resolve().parent / "_configs"
 SCHEMA_DIR = CONFIG_DIR / "schemas"
 TIMEZONE = "Asia/Colombo"
 

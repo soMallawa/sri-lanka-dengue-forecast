@@ -68,6 +68,7 @@ build-backend = "hatchling.build"
 packages = ["src/dengue_forecast"]
 
 [tool.hatch.build.targets.wheel.force-include]
+"configs" = "dengue_forecast/_configs"
 "src/dengue_forecast/model_manifest_trusted.json" = "dengue_forecast/model_manifest_trusted.json"
 
 [tool.pytest.ini_options]

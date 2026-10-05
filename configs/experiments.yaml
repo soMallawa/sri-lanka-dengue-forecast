@@ -1,0 +1,91 @@
+development:
+  seed: 42
+  stages:
+    - baselines
+    - screen
+    - ablation
+    - tune
+  feature_sets:
+    - cases_only
+    - cases_rainfall
+    - cases_full_weather
+    - full_context
+  screen:
+    models:
+      ridge:
+        family: ridge
+        objective: regression
+        hyperparams:
+          alpha: 1.0
+      poisson:
+        family: poisson
+        objective: poisson
+        hyperparams:
+          alpha: 1.0
+          max_iter: 300
+      random_forest:
+        family: random_forest
+        objective: regression
+        hyperparams:
+          n_estimators: 128
+          max_depth: 10
+          min_samples_leaf: 3
+          n_jobs: 1
+      xgboost_square:
+        family: xgboost
+        objective: reg:squarederror
+        hyperparams:
+          n_estimators: 100
+          max_depth: 3
+          learning_rate: 0.08
+          n_jobs: 1
+      xgboost_poisson:
+        family: xgboost
+        objective: count:poisson
+        hyperparams:
+          n_estimators: 100
+          max_depth: 3
+          learning_rate: 0.08
+          n_jobs: 1
+      lightgbm_regression:
+        family: lightgbm
+        objective: regression
+        hyperparams:
+          n_estimators: 100
+          max_depth: 3
+          learning_rate: 0.08
+          n_jobs: 1
+      lightgbm_poisson:
+        family: lightgbm
+        objective: poisson
+        hyperparams:
+          n_estimators: 100
+          max_depth: 3
+          learning_rate: 0.08
+          n_jobs: 1
+  tuning:
+    sampler: TPESampler
+    seed: 42
+    timeout_minutes: 90
+    trials:
+      xgboost: 12
+      lightgbm: 12
+      random_forest: 8
+    search_spaces:
+      random_forest:
+        n_estimators: [64, 256]
+        max_depth: [4, 10]
+        min_samples_leaf: [2, 12]
+      boosted_common:
+        n_estimators: [100, 400]
+        max_depth: [2, 6]
+        learning_rate: [0.02, 0.2]
+        subsample: [0.7, 1.0]
+        colsample_bytree: [0.7, 1.0]
+        reg_alpha: [0.0, 2.0]
+        reg_lambda: [0.1, 10.0]
+      lightgbm:
+        num_leaves: [7, 31]
+        objective: [regression, poisson]
+      xgboost:
+        objective: [reg:squarederror, count:poisson]

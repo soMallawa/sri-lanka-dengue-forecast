@@ -1,0 +1,65 @@
+seed: 42
+
+dataset:
+  path: data/processed/ml_training_dataset.parquet
+  registry_path: data/reports/feature_registry.csv
+  target: cases_next_week
+  forecast_cutoff_column: week_end_date
+  target_horizon_weeks: 1
+
+modeling_feature_overlay:
+  purpose: "Milestone 2 Stage 1 modeling-only eligibility override."
+  eligible_exceptions:
+    - district_id
+    - area_km2
+  forbidden_context:
+    - population_reference
+    - population_reference_year
+    - population_method
+    - population_density_per_km2
+    - incidence_per_100k_using_2024_population
+    - incidence_next_week_per_100k
+    - centroid_lat
+    - centroid_lon
+    - province_name
+    - geometry_source
+    - geometry_source_version
+
+feature_sets:
+  cases_only:
+    include_groups:
+      - epidemiology
+      - seasonality
+    include_columns:
+      - district_id
+  cases_rainfall:
+    extends: cases_only
+    include_prefixes:
+      - rainfall_
+      - rain_days_
+  cases_full_weather:
+    extends: cases_rainfall
+    include_groups:
+      - weather
+  full_context:
+    extends: cases_full_weather
+    include_columns:
+      - area_km2
+
+splits:
+  min_training_years: 4
+  min_validation_rows: 300
+  min_validation_districts: 20
+  min_target_coverage_pct: 60
+  embargo_weeks: 1
+  horizon_weeks: 1
+
+holdout:
+  candidate_years:
+    - 2023
+    - 2024
+    - 2025
+  preferred_year: 2024
+  min_rows: 300
+  min_districts: 20
+  min_target_coverage_pct: 60

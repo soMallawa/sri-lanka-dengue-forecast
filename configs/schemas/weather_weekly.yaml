@@ -1,0 +1,26 @@
+name: weather_weekly
+primary_key: [district_id, week_start_date]
+columns:
+  district_id: {dtype: string, required: true, nullable: false}
+  district_name: {dtype: string, required: true, nullable: false}
+  week_start_date: {dtype: date, required: true, nullable: false}
+  week_end_date: {dtype: date, required: true, nullable: false}
+  rainfall_sum_mm: {dtype: float, required: true, nullable: true, min: 0}
+  rainfall_mean_daily_mm: {dtype: float, required: true, nullable: true, min: 0}
+  rainfall_max_daily_mm: {dtype: float, required: true, nullable: true, min: 0}
+  rain_days_1mm: {dtype: integer, required: true, nullable: true, min: 0, max: 7}
+  rain_days_10mm: {dtype: integer, required: true, nullable: true, min: 0, max: 7}
+  temp_mean_c: {dtype: float, required: true, nullable: true, min: -5, max: 50}
+  temp_min_c: {dtype: float, required: true, nullable: true, min: -5, max: 50}
+  temp_max_c: {dtype: float, required: true, nullable: true, min: -5, max: 50}
+  humidity_mean_pct: {dtype: float, required: true, nullable: true, min: 0, max: 100}
+  weather_expected_days: {dtype: integer, required: true, nullable: true, min: 0, max: 7}
+  weather_available_days: {dtype: integer, required: true, nullable: true, min: 0, max: 7}
+  weather_temporal_coverage_pct: {dtype: float, required: true, nullable: true, min: 0, max: 100}
+  weather_grid_cells: {dtype: integer, required: true, nullable: true, min: 0}
+  weather_spatial_coverage_pct: {dtype: float, required: true, nullable: true, min: 0, max: 100}
+  weather_quality_flag: {dtype: string, required: true, nullable: true}
+  rain_source: {dtype: string, required: true, nullable: false}
+  rain_source_version: {dtype: string, required: true, nullable: false}
+  climate_source: {dtype: string, required: true, nullable: false}
+  climate_source_version: {dtype: string, required: true, nullable: false}

@@ -1,0 +1,21 @@
+name: dengue_weekly
+primary_key: [district_id, week_start_date]
+columns:
+  district_id: {dtype: string, required: true, nullable: false}
+  district_name: {dtype: string, required: true, nullable: false}
+  week_start_date: {dtype: date, required: true, nullable: false}
+  week_end_date: {dtype: date, required: true, nullable: false}
+  year: {dtype: integer, required: true, nullable: false, min: 1900}
+  week: {dtype: integer, required: true, nullable: false, min: 1, max: 53}
+  year_week: {dtype: string, required: true, nullable: false}
+  dengue_cases: {dtype: integer, required: true, nullable: true, min: 0}
+  case_status:
+    dtype: enum
+    required: true
+    nullable: false
+    allowed: [observed, missing, imputed]
+  source_name: {dtype: string, required: true, nullable: false}
+  source_document: {dtype: string, required: true, nullable: false}
+  source_url: {dtype: string, required: true, nullable: false}
+  source_retrieved_at: {dtype: datetime, required: true, nullable: false}
+  parser_version: {dtype: string, required: true, nullable: false}

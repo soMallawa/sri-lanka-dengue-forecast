@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "github_repository": "soMallawa/sri-lanka-dengue-forecast",
+  "github_tag": "v1.0.0",
+  "huggingface_model": {
+    "repo_id": "manthilaffs/sri-lanka-dengue-forecast",
+    "revision": "3c40226aa97579624794d91a10fbabe5b3443acb"
+  },
+  "huggingface_dataset": {
+    "repo_id": "manthilaffs/sri-lanka-dengue-forecast-data",
+    "revision": "de2ceb166f246d90ad7c6585a07889bed98ac53e",
+    "status": "metadata-only; research observations withheld pending redistribution permission"
+  },
+  "evaluation": "saved qualified partial-2025 results; no retraining or final-evaluation rerun"
+}

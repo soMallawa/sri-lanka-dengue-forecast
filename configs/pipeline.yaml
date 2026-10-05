@@ -1,0 +1,31 @@
+project:
+  timezone: Asia/Colombo
+  start_year: 2010
+
+milestone1:
+  # Initial accepted full-source run. Preferred future backfill remains 2010+.
+  start_year: 2024
+  end_year: 2024
+  weather_start_date: 2024-01-01
+  weather_end_date: 2025-01-03
+
+dengue:
+  canonical_source: epidemiology_unit_wer
+  recent_source: ndcu_weekly
+  allow_cumulative_derivation: false
+
+weather:
+  rainfall_provider: chirps_v3
+  climate_provider: era5_open_meteo
+  min_temporal_coverage_pct: 85
+  min_spatial_coverage_pct: 90
+
+features:
+  case_lags: [1, 2, 3, 4, 6, 8]
+  rainfall_lags: [1, 2, 3, 4, 6, 8]
+  temperature_lags: [1, 2, 4]
+  humidity_lags: [1, 2, 4]
+  case_roll_windows: [2, 4, 8]
+  primary_horizon_weeks: 1
+  min_weather_coverage_pct: 85
+  required_lags: [1, 2, 3, 4]

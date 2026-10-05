@@ -1,0 +1,18 @@
+name: district_reference
+primary_key: [district_id]
+columns:
+  district_id: {dtype: string, required: true, nullable: false}
+  district_name: {dtype: string, required: true, nullable: false}
+  province_name: {dtype: string, required: true, nullable: false}
+  population_reference: {dtype: integer, required: true, nullable: true, min: 1}
+  population_reference_year: {dtype: integer, required: true, nullable: true, min: 1900}
+  population_method: {dtype: string, required: true, nullable: true}
+  population_density_per_km2: {dtype: float, required: true, nullable: true, min: 0}
+  area_km2: {dtype: float, required: true, nullable: true, min: 0}
+  centroid_lat: {dtype: float, required: true, nullable: true, min: -90, max: 90}
+  centroid_lon: {dtype: float, required: true, nullable: true, min: -180, max: 180}
+  geometry: {dtype: geometry, required: false, nullable: true}
+  geometry_source: {dtype: string, required: true, nullable: false}
+  geometry_source_version: {dtype: string, required: false, nullable: true}
+  population_source: {dtype: string, required: true, nullable: false}
+  population_source_version: {dtype: string, required: false, nullable: true}

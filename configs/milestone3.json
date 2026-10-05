@@ -1,0 +1,359 @@
+{
+  "authorization_sha256": "01ec9af9b409bbb67f688f28da21703ff40f84e584e03fb9e962c50110d2e1a7",
+  "authorization_source": "docs/m3-protocol-deviation-authorization.md",
+  "bootstrap": {
+    "fixed_length": true,
+    "percentile_method": "linear",
+    "policy": "frozen moving4 observed-week blocks; no gaps; no fold crossing",
+    "replicates": 1000,
+    "seed": 42,
+    "short_run_handling": "use available complete moving4 blocks only; report insufficiency",
+    "statistic": "mean fold stats"
+  },
+  "claim_limits": [
+    "no_operational_backtesting_claim",
+    "no_representative_annual_2025_claim"
+  ],
+  "determinism": {
+    "lightgbm_n_jobs": 1,
+    "m2_conventions": {
+      "all_missing_features_dropped": true,
+      "categorical_one_hot": true,
+      "clip_negative_predictions": true,
+      "numeric_median_imputation": true
+    },
+    "preprocessing_fit_scope": "fold_training_rows_only",
+    "seed": 42
+  },
+  "explainability": {
+    "fold": 2020,
+    "permutation_repeats": 3,
+    "rows": 200
+  },
+  "features": {
+    "area_population": "excluded",
+    "availability_informed_partial_year": {
+      "coverage_months": [
+        "March",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November"
+      ],
+      "district_origins": 600,
+      "districts": 25,
+      "weeks": 24
+    },
+    "digests": {
+      "cases_full_weather": "fbcb0b6be3ef6eb87089403e995bdae0d4adca2a1f6a89d5f62381b8f5134d52",
+      "cases_only": "6e7a76ab53d75a0bb8e25a0218d0c186cc0450fd99df49d36cd3eb23b3f85c7d",
+      "cases_rainfall": "89d98ee2e6f42ae5a687f8ad40393d99f09699a23bcaca664b8032be5f4ea38f"
+    },
+    "forbidden": [
+      "area_km2",
+      "cases_next_2w",
+      "cases_next_4w",
+      "cases_next_week",
+      "centroid_lat",
+      "centroid_lon",
+      "incidence_next_week_per_100k",
+      "incidence_per_100k_using_2024_population",
+      "population_density_per_km2",
+      "population_method",
+      "population_reference",
+      "population_reference_year",
+      "province_name",
+      "target_h1",
+      "target_h2",
+      "target_h3",
+      "target_h4"
+    ],
+    "origin_calendar": "unchanged_from_m2",
+    "registry_sha256": "7b8092ebeea00a7392ba2fbfdb5462ae49faf52ce28bb6b5ca7cd824b3c81475",
+    "registry_source": "data/reports/feature_registry.csv",
+    "sets": {
+      "cases_full_weather": [
+        "cases_change_1w",
+        "cases_change_2w",
+        "cases_lag_1",
+        "cases_lag_2",
+        "cases_lag_3",
+        "cases_lag_4",
+        "cases_lag_6",
+        "cases_lag_8",
+        "cases_pct_change_1w",
+        "cases_pct_change_4w",
+        "cases_roll_max_4",
+        "cases_roll_mean_2",
+        "cases_roll_mean_4",
+        "cases_roll_mean_8",
+        "cases_roll_min_4",
+        "cases_roll_std_4",
+        "cases_roll_std_8",
+        "cases_slope_4w",
+        "dengue_cases",
+        "district_id",
+        "humidity_lag_1",
+        "humidity_lag_2",
+        "humidity_lag_4",
+        "humidity_mean_pct",
+        "humidity_roll_mean_2",
+        "humidity_roll_mean_4",
+        "log1p_cases",
+        "month",
+        "month_cos",
+        "month_sin",
+        "quarter",
+        "rain_days_10mm",
+        "rain_days_1mm",
+        "rain_days_roll_sum_4",
+        "rainfall_lag_1",
+        "rainfall_lag_2",
+        "rainfall_lag_3",
+        "rainfall_lag_4",
+        "rainfall_lag_6",
+        "rainfall_lag_8",
+        "rainfall_max_daily_mm",
+        "rainfall_mean_daily_mm",
+        "rainfall_roll_max_4",
+        "rainfall_roll_mean_4",
+        "rainfall_roll_sum_2",
+        "rainfall_roll_sum_4",
+        "rainfall_roll_sum_8",
+        "rainfall_sum_mm",
+        "temp_max_c",
+        "temp_mean_c",
+        "temp_mean_lag_1",
+        "temp_mean_lag_2",
+        "temp_mean_lag_4",
+        "temp_min_c",
+        "temp_roll_mean_2",
+        "temp_roll_mean_4",
+        "temp_roll_std_4",
+        "week_cos",
+        "week_of_year",
+        "week_sin"
+      ],
+      "cases_only": [
+        "cases_change_1w",
+        "cases_change_2w",
+        "cases_lag_1",
+        "cases_lag_2",
+        "cases_lag_3",
+        "cases_lag_4",
+        "cases_lag_6",
+        "cases_lag_8",
+        "cases_pct_change_1w",
+        "cases_pct_change_4w",
+        "cases_roll_max_4",
+        "cases_roll_mean_2",
+        "cases_roll_mean_4",
+        "cases_roll_mean_8",
+        "cases_roll_min_4",
+        "cases_roll_std_4",
+        "cases_roll_std_8",
+        "cases_slope_4w",
+        "dengue_cases",
+        "district_id",
+        "log1p_cases",
+        "month",
+        "month_cos",
+        "month_sin",
+        "quarter",
+        "week_cos",
+        "week_of_year",
+        "week_sin"
+      ],
+      "cases_rainfall": [
+        "cases_change_1w",
+        "cases_change_2w",
+        "cases_lag_1",
+        "cases_lag_2",
+        "cases_lag_3",
+        "cases_lag_4",
+        "cases_lag_6",
+        "cases_lag_8",
+        "cases_pct_change_1w",
+        "cases_pct_change_4w",
+        "cases_roll_max_4",
+        "cases_roll_mean_2",
+        "cases_roll_mean_4",
+        "cases_roll_mean_8",
+        "cases_roll_min_4",
+        "cases_roll_std_4",
+        "cases_roll_std_8",
+        "cases_slope_4w",
+        "dengue_cases",
+        "district_id",
+        "log1p_cases",
+        "month",
+        "month_cos",
+        "month_sin",
+        "quarter",
+        "rain_days_10mm",
+        "rain_days_1mm",
+        "rain_days_roll_sum_4",
+        "rainfall_lag_1",
+        "rainfall_lag_2",
+        "rainfall_lag_3",
+        "rainfall_lag_4",
+        "rainfall_lag_6",
+        "rainfall_lag_8",
+        "rainfall_max_daily_mm",
+        "rainfall_mean_daily_mm",
+        "rainfall_roll_max_4",
+        "rainfall_roll_mean_4",
+        "rainfall_roll_sum_2",
+        "rainfall_roll_sum_4",
+        "rainfall_roll_sum_8",
+        "rainfall_sum_mm",
+        "week_cos",
+        "week_of_year",
+        "week_sin"
+      ]
+    }
+  },
+  "freeze_status": {
+    "no_real_cohort_keys_fabricated": true,
+    "once_only_freeze_gate": "pending_not_implemented",
+    "real_2025_exact_key_freeze": "pending_authorized_metadata_only_seam"
+  },
+  "historical_publication_vintage": {
+    "present_availability": "unestablished",
+    "prohibited_claims": [
+      "no_operational_backtesting_claim",
+      "no_representative_annual_2025_claim",
+      "no_actual_2025_outcome_claim_until_gate_engine_exists"
+    ],
+    "status": "future_strict_required",
+    "strict_future_validation_required": true
+  },
+  "metrics": {
+    "bias": "mean prediction minus observed dengue case count",
+    "fold_wins": "count of validation folds where model MAE is strictly lower than same-origin persistence MAE; ties are not wins",
+    "high_incidence_mae": "MAE on rows whose observed target is at or above q90_incidence",
+    "mae": "mean absolute error on dengue case counts",
+    "poisson_deviance": "mean Poisson deviance on nonnegative case counts; undefined values reported as null",
+    "r2": "coefficient of determination; undefined denominators reported as null",
+    "rmse": "root mean squared error on dengue case counts"
+  },
+  "models": {
+    "lightgbm_trial010": {
+      "effective_estimator_defaults": {
+        "force_col_wise": null,
+        "n_jobs": 1,
+        "objective": "poisson",
+        "random_state": 42,
+        "verbose": -1
+      },
+      "family": "lightgbm",
+      "hyperparams": {
+        "colsample_bytree": 0.8611722990016195,
+        "learning_rate": 0.05150802206218031,
+        "max_depth": 3,
+        "min_child_samples": 26,
+        "n_estimators": 376,
+        "n_jobs": 1,
+        "num_leaves": 21,
+        "reg_alpha": 1.7191020240514172,
+        "reg_lambda": 0.14497046433306132,
+        "subsample": 0.8251778518401856
+      },
+      "installed_lightgbm_version": "4.7.0",
+      "model_sha256": "c9fe3a473589dc40b25527dc91d558b3cbc7c212798ae3381e6fe43f426df26e",
+      "objective": "poisson",
+      "postprocessing": {
+        "clip_negative_predictions": true
+      },
+      "preprocessing": {
+        "fit_scope": "fold_training_rows_only"
+      },
+      "seed": 42,
+      "source_metadata_path": "artifacts/models/tune_lightgbm_trial_010__val_2014/metadata.json",
+      "source_metadata_sha256": "c7c5cb8b60942d978203cf177076014fc5c6fbd816b322c42eb46a16da38862a"
+    },
+    "ridge": {
+      "family": "ridge",
+      "hyperparams": {
+        "alpha": 1.0
+      },
+      "preprocessing": {
+        "fit_scope": "fold_training_rows_only"
+      },
+      "seed": 42
+    }
+  },
+  "selection": {
+    "candidate_count": 24,
+    "champion_metric": "mean_fold_mae",
+    "final_2024_train_allowed": true,
+    "folds": [
+      2014,
+      2015,
+      2016,
+      2018,
+      2019,
+      2020
+    ],
+    "max_additional_tuning_trials": 0,
+    "model_count": 144,
+    "primary": "ridge__cases_only",
+    "tie_order": [
+      "mean_fold_mae",
+      "ridge_family",
+      "fewer_features",
+      "lexicographic_id"
+    ]
+  },
+  "study_designation": "qualified_retrospective_observation_time",
+  "targets": {
+    "aggregation_end": "target week end must be < 2025-01-01 for development",
+    "calendar_2025_boundary": "2025-01-01",
+    "common_evaluation_requires": [
+      "dengue_cases",
+      "cases_lag_1",
+      "cases_lag_2",
+      "cases_lag_3",
+      "cases_lag_4",
+      "target_h1",
+      "target_h2",
+      "target_h3",
+      "target_h4"
+    ],
+    "cutoff_origin_week_end": "origin week_end_date < 2025-01-01 for development",
+    "horizons": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "join": "exact_district_date_origin_start_plus_7h_days",
+    "label_embargo": "target_week_end + 7 days < first scheduled test origin",
+    "no2025_boundary": "calendar 2025-01-01 independent of scheduled test boundary",
+    "predictor_observation_cutoff": "all predictor observation/reference and aggregation end timestamps must be <= origin week_end_date"
+  },
+  "test_cohort": {
+    "coverage": "partial_year_availability_informed",
+    "coverage_months": [
+      "March",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November"
+    ],
+    "district_origins": 600,
+    "districts": 25,
+    "weeks": 24
+  },
+  "thresholds": {
+    "boundaries": "frozen from sorted training keys, target, current dengue, and requested feature digests",
+    "delta_quantile": 0.25,
+    "method": "linear",
+    "quantiles": [
+      0.9,
+      0.95
+    ]
+  }
+}

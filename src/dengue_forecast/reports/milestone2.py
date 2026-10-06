@@ -567,7 +567,7 @@ def generate_milestone2_summary(
         ],
         "",
         "## Reproducibility",
-        "- CV source archive: `.hermes/m2-source-before-first-cv.tar.gz` is the immutable old-version source for the completed CV run; current report/gate glue may be newer.",
+        "- CV source archive: `m2-source-before-first-cv.tar.gz` (retained with the private research artifacts) is the immutable old-version source for the completed CV run; current report/gate glue may be newer.",
         "- Commands: `UV_CACHE_DIR=/tmp/uv-cache uv run python -m dengue_forecast.cli milestone2 validate` for read-only completed-run validation.",
         "- Local prediction uses the saved champion bundle only after freeze; reports never rescore the locked test.",
         *[

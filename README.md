@@ -102,4 +102,4 @@ The initial dataset release is metadata-only. Actual research rows are withheld 
 
 Source repository: <https://github.com/soMallawa/sri-lanka-dengue-forecast>
 
-Version: `v1.0.0`
+Version: `v1.0.1`

@@ -1,8 +1,9 @@
 cff-version: 1.2.0
 title: "Sri Lanka Dengue Forecast"
-version: "1.0.0"
+version: "1.0.1"
 authors:
-  - alias: "soMallawa"
+  - family-names: "Mallawa"
+    given-names: "Manthila"
 repository-code: "https://github.com/soMallawa/sri-lanka-dengue-forecast"
 url: "https://huggingface.co/manthilaffs/sri-lanka-dengue-forecast"
 license: "Apache-2.0"

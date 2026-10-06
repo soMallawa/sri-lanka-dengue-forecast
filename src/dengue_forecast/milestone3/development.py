@@ -31,7 +31,7 @@ ORIGIN_CALENDAR_PROVENANCE_COLUMNS = ["week"]
 PRODUCTION_SOURCE_RELATIVE = Path("data/processed/ml_training_dataset.parquet")
 PRODUCTION_OUTPUT_ROOT = core.REPO_ROOT / "artifacts" / "milestone3" / "development"
 FIXTURE_OUTPUT_ROOTS = (
-    core.REPO_ROOT / ".hermes" / "qa-temp",
+    core.REPO_ROOT / ".research" / "qa-temp",
     Path("/tmp/dengue-forecast-m3-qa-temp"),
 )
 PROTECTED_M1_M2_METADATA = core.REPO_ROOT / "docs" / "protected-m1-m2-before.json"

@@ -103,3 +103,37 @@ The initial dataset release is metadata-only. Actual research rows are withheld 
 Source repository: <https://github.com/soMallawa/sri-lanka-dengue-forecast>
 
 Version: `v1.0.1`
+
+## Citation
+
+Please cite the software when using the source code or training pipeline, and the model release when using the frozen fitted models.
+
+### APA
+
+**Software**
+
+> Mallawa, M. (2026). *Sri Lanka Dengue Forecast* (Version 1.0.1) [Computer software]. GitHub. https://github.com/soMallawa/sri-lanka-dengue-forecast
+
+**Models**
+
+> Mallawa, M. (2026). *Sri Lanka district-level dengue forecasting* (Model release v1.0.0) [Trained models]. Hugging Face. https://huggingface.co/manthilaffs/sri-lanka-dengue-forecast
+
+### BibTeX
+
+```bibtex
+@misc{mallawa_dengue_software_2026,
+  author       = {Mallawa, Manthila},
+  title        = {Sri Lanka Dengue Forecast},
+  year         = {2026},
+  howpublished = {\url{https://github.com/soMallawa/sri-lanka-dengue-forecast}},
+  note         = {Software version 1.0.1}
+}
+
+@misc{mallawa_dengue_models_2026,
+  author       = {Mallawa, Manthila},
+  title        = {Sri Lanka district-level dengue forecasting},
+  year         = {2026},
+  howpublished = {\url{https://huggingface.co/manthilaffs/sri-lanka-dengue-forecast}},
+  note         = {Model release v1.0.0; revision 3c40226aa97579624794d91a10fbabe5b3443acb}
+}
+```

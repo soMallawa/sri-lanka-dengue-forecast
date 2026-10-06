@@ -31,6 +31,8 @@ Inputs must already be model-ready weekly feature rows with the exact columns in
 
 Model repository: <https://huggingface.co/manthilaffs/sri-lanka-dengue-forecast>
 
+Interactive demo: <https://manthilaffs-sri-lanka-dengue-demo.hf.space> — historical predictions and a clearly labelled synthetic model sandbox; not live forecasting.
+
 Selected final models:
 
 | Horizon | Model | MAE | Persistence MAE |
